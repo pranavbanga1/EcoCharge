@@ -1,5 +1,3 @@
-# README.md for EcoCharge GitHub Repository
-
 # 🔋 EcoCharge – Modular Vape Battery Power Supply with Real-Time BMS Control
 
 EcoCharge is a modular, eco-friendly battery pack system developed by recycling lithium-ion vape cells and integrating real-time monitoring using an Arduino–ESP32 communication setup. It features dynamic thermal control, current safety mechanisms, and a responsive web dashboard via local hosting.
