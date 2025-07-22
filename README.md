@@ -101,7 +101,39 @@ Billions of vape batteries are discarded every year, leading to major e-waste. E
 - Converts and packages data into pipe-separated strings:  
   `Temp1|Humidity1|...|Voltage5|Current5|Fan1|...|BatteryCap`
 
-  <img width="1860" height="404" alt="image" src="https://github.com/user-attachments/assets/1dc070ea-4217-4259-9128-7e37a9545dcb" />
+ <img width="1800" height="404" alt="image" src="https://github.com/user-attachments/assets/1dc070ea-4217-4259-9128-7e37a9545dcb" />
+
+### 📟 ESP32 Code Structure (See `ESP32_Main.ino`)
+
+<table>
+<tr>
+<td>
+
+- **WiFi Access Point**  
+  - Hosted via `WiFi.softAP()`, dashboard accessible at `192.168.4.1`.
+
+- **Serial2 Interface**  
+  - Communicates with Arduino Mega over RXD2/TXD2 at 9600 baud.
+
+- **Data Parsing**  
+  - Incoming pipe-separated sensor data is parsed into arrays:  
+    `dhtTemps[]`, `dhtHumidities[]`, `voltages[]`, `currents[]`, `fans[]`.
+
+- **Async Web Server**  
+  - Serves HTML dashboard (`/`) and live sensor JSON (`/data`).
+
+- **Frontend Dashboard**  
+  - Auto-updates every 5s with real-time system stats via JavaScript.
+
+</td>
+<td>
+  <img src="https://github.com/user-attachments/assets/d355badf-735e-49b9-8e71-8c93703543b9" alt="Dashboard" width="400" height= "450"/>
+</td>
+</tr>
+</table>
+
+
+
 
 
 ---
